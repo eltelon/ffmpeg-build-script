@@ -714,6 +714,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   fi
 fi
 
+# Decklink
+CFLAGS+=" -I/root/bmdl/Linux/include"
+LDFLAGS+=" -L/root/bmdl/Linux/include"
+CONFIGURE_OPTIONS+=("--enable-decklink")
+
 ##
 ## FFmpeg
 ##
